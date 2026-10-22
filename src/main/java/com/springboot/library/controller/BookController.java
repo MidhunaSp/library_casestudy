@@ -38,7 +38,6 @@ public class BookController {
 
     // add a new book (ADMIN)
     @PostMapping("/api/book/add")
-    @ResponseStatus(HttpStatus.CREATED)
     public BookInfoDto addBook(@Valid @RequestBody BookReqDto bookReqDto) {
         return bookService.addBook(bookReqDto);
     }
